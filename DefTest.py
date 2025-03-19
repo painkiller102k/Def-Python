@@ -20,3 +20,35 @@ s,p,d=square(float(input("Sisesta ruudu kulg: ")))
 print("Ruudu pindala on",s)
 print("Ruudu ümbermõõt on",p)
 print("Ruudu diagonaal on",d)
+
+
+#season funktsiooni testimine
+kuu=int(input("Sisesta kuu number: "))
+v= season(kuu)
+print(v)
+
+#bank funktsiooni testimine
+a=float(input("Sisesta summa: "))
+b=int(input("Sisesta aastate arv: "))
+v= bank(a, b)
+print(v)
+
+#is_prime funktsiooni testimine
+a=int(input("Sisesta arv: "))
+v=is_prime(a)
+print(v)
+if v==True:
+    print("On algarv")
+else:
+    print("Ei ole algarv")
+
+#date funktsiooni testimine
+p=int(input("Sisesta päev: "))
+k=int(input("Sisesta kuu: "))
+a=int(input("Sisesta aasta: "))
+v=date(p,k,a)
+print(v)
+if v==True:
+    print("Kuupäev on õige")
+else:
+    print("Kuupäev on vale")
