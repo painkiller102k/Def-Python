@@ -37,7 +37,7 @@ def autoriseeri_kasutaja(username: str, password: str) -> bool: #авториз�
     """
     if username in kasutajad:
         check = kasutajad.index(username)
-        return paroolid[check] == password #возвращает True, если пароль совпадает с введенным 
+        return paroolid[check] == password
     return False
 
 def muuda_parooli(username: str, new_password: str) -> bool: #изменение пароля
