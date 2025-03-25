@@ -52,3 +52,5 @@ if v==True:
     print("Kuupäev on õige")
 else:
     print("Kuupäev on vale")
+
+#xor funktsiooni testimine

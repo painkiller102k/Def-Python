@@ -111,3 +111,14 @@ def X0R_cipher(s:int, k:int) -> str:
     krüpteeritav string ja krüpteerimisvõti, mis tagastab stringi, mis on krüpteeritud,
     rakendades XOR (^) funktsiooni stringi märkidele koos võtmega.
     """
+    encrypted = ''.join([chr(ord(char) ^ k) for char in s])
+    return encrypted
+
+def XOR_uncipher(s: str, k: int) -> str:
+    """XOR_cipher
+    Kirjutage XOR_cipher funktsioon, mis võtab 2 argumenti:
+    krüpteeritav string ja krüpteerimisvõti, mis tagastab stringi, mis on krüpteeritud,
+    rakendades XOR (^) funktsiooni stringi märkidele koos võtmega.
+    """
+    decrypted = ''.join([chr(ord(char) ^ k) for char in s])
+    return decrypted
