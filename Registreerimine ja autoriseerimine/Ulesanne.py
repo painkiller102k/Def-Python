@@ -10,7 +10,7 @@ while True:
         print("3. Parooli muutmine") #изменение пароля
         print("4. Parooli taastamine") #восстановление пароля
         print("5. End") #выход
-        valik = input("Teie valik: ") 
+        valik = input("Teie valik: ")
 
         if valik == "1":    
             print("Uue kasutaja registreerimine:")
