@@ -93,11 +93,12 @@ def same_palg(palgad: list, inimesed: list):
     """Et teada saada, kes saab sama palka, leidke, kui palju selliseid inimesi nende andmeid ekraanile kuvada.
     Узнать кто получает одинаковую зарплату
     """
-    palkade_grupid = {}
-    for i in range(len(palgad)):
-        palk = palgad[i]
-        nimi = inimesed[i]
-        if palk not in palkade_grupid:
-            palkade_grupid[palk] = []
-        palkade_grupid[palk].append(nimi)
-    return palkade_grupid
+    grupid = []
+    for palk, nimi in zip(palgad, inimesed):
+        for i in grupid:
+            if i[0] == palk:
+                i[1].append(nimi)
+                break
+        else:
+            grupid.append([palk, [nimi]])
+    return grupid
