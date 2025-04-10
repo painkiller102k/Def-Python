@@ -80,6 +80,15 @@ def tulumaks(palgad: list, inimesed: list, nimi: str) -> float:
     netopalk = brutopalk * 0.8  # проходный налог 20% !!
     return netopalk
 
+def JarjestaPalgad(palgad: list, inimesed: list):
+    """
+    Järjestab palgad kasvavas ja kahanevas järjekorras koos nimedega.
+    показывает зарплаты по возрастанию и убыванию
+    """
+    kasvav = sorted(zip(palgad, inimesed))
+    kahanev = sorted(zip(palgad, inimesed), reverse=True) # возвращает true для сортировки по убыванию
+    return kasvav, kahanev
+
 def same_palg(palgad: list, inimesed: list):
     """Et teada saada, kes saab sama palka, leidke, kui palju selliseid inimesi nende andmeid ekraanile kuvada.
     Узнать кто получает одинаковую зарплату
@@ -92,12 +101,3 @@ def same_palg(palgad: list, inimesed: list):
             palkade_grupid[palk] = []
         palkade_grupid[palk].append(nimi)
     return palkade_grupid
-
-def JarjestaPalgad(palgad: list, inimesed: list):
-    """
-    Järjestab palgad kasvavas ja kahanevas järjekorras koos nimedega.
-    показывает зарплаты по возрастанию и убыванию
-    """
-    kasvav = sorted(zip(palgad, inimesed))
-    kahanev = sorted(zip(palgad, inimesed), reverse=True) # возвращает true для сортировки по убыванию
-    return kasvav, kahanev
